@@ -70,6 +70,9 @@ $.fn.serializeObject = function() {
 As always you need to protect your users by encoding input and output, here is some simple methods for doing so.
 
 ```js
+
+//create a in-memory div, set it's inner text(which jQuery automatically encodes)
+//then grab the encoded contents back out.  The div never exists on the page.
 function htmlEncode(value){
   return $('<div/>').text(value).html();
 }
